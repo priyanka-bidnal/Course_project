@@ -8,5 +8,9 @@ def is_prime(num):
 
 
 if __name__ == "__main__":
-    num = int(input("Enter a number: "))
-    print(is_prime(num))
+    # Local execution only
+    try:
+        num = int(input("Enter a number: "))
+        print(is_prime(num))
+    except EOFError:
+        print("No input provided (CI environment)")
